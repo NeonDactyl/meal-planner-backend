@@ -15,11 +15,7 @@ class RecipesController < ApplicationController
                 :only => [:quantity, :id]
             }
         },
-        :only => [:name, :id, :instructionSet])
-    end
-
-    def create
-        
+        :only => [:name, :id, :instruction_set])
     end
     
     def show
@@ -37,8 +33,12 @@ class RecipesController < ApplicationController
                 :only => [:quantity, :id]
             }
         },
-        :only => [:name, :id, :instructionSet])
+        :only => [:name, :id, :instruction_set])
     end
-    
+
+    def create
+        recipe = Recipe.new(params[:recipe])
+        recipe.save
+    end
     
 end
