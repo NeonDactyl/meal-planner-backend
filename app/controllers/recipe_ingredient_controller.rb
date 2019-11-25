@@ -6,6 +6,14 @@ class RecipeIngredientController < ApplicationController
         render json: recipeIngredient.to_json()
     end
 
+    def update
+        recipeIngredient = RecipeIngredient.find(params[:id])
+        if recipeIngredient.update(recipe_ingredient_params)
+            render json: recipeIngredient.to_json()
+        end
+    end
+    
+
     private
 
     def recipe_ingredient_params

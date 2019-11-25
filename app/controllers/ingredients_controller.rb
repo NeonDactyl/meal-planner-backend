@@ -1,4 +1,10 @@
 class IngredientsController < ApplicationController
+
+    def find(query)
+        # TODO: Add some sort of searching based on the query being passed in here
+    end
+    
+
     def create
         ingredient = Ingredient.new(ingredient_params)
         ingredient.save
