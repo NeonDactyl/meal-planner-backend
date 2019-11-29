@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  resources :recipes
-  resources :ingredients
-  resources :unit_of_measures
+  resources :recipes do
+    post 'search', on: :collection
+  end
+  resources :ingredients do
+    post 'search', on: :collection
+  end
+  resources :unit_of_measures do
+    post 'search', on: :collection
+  end
   post '/recipeIngredient', to: "recipe_ingredient#create"
   put  '/recipeIngredient/:id', to: "recipe_ingredients#update"
 

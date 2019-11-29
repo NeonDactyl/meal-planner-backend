@@ -1,4 +1,3 @@
-class Ingredient < ApplicationRecord
-    has_many :recipe_ingredients
+class Ingredient < Searchable
     has_many :recipes, :through => :recipe_ingredients
 end

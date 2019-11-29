@@ -1,2 +1,2 @@
-class UnitOfMeasure < ApplicationRecord
+class UnitOfMeasure < Searchable
 end

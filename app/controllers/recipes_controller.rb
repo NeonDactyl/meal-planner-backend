@@ -41,6 +41,11 @@ class RecipesController < ApplicationController
         recipe.save
     end
 
+    def search
+        recipes = Recipe.search(params[:query])
+        render json: recipes.to_json()
+    end
+
     private
 
     def recipe_params

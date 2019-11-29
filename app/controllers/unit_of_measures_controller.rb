@@ -15,6 +15,11 @@ class UnitOfMeasuresController < ApplicationController
         uom = UnitOfMeasure.all
         render json: uom.to_json()
     end
+
+    def search
+        uom = UnitOfMeasure.search(params[:query])
+        render json: uom.to_json()
+    end
     
     
     private
