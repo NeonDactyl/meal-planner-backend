@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     get 'search', on: :collection
   end
   post '/recipeIngredient', to: "recipe_ingredient#create"
-  put  '/recipeIngredient/:id', to: "recipe_ingredients#update"
+  put  '/recipeIngredient/:id', to: "recipe_ingredient#update"
+  get '/recipeIngredient/:id', to: "recipe_ingredient#show"
 
   # TODO: Refactor routes to match what is actually needed
   ####### recipe should be only resource?

@@ -12,6 +12,11 @@ class RecipeIngredientController < ApplicationController
             render json: recipeIngredient.to_json()
         end
     end
+
+    def show
+        ri = RecipeIngredient.find(params[:id])
+        render json: ri.to_json()
+    end
     
 
     private
