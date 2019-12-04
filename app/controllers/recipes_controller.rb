@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
                         :only => [:name, :id]
                     }
                 },
-                :only => [:quantity, :id]
+                :only => [:quantity, :id, :recipe_id]
             }
         },
         :only => [:name, :id, :instruction_set])
